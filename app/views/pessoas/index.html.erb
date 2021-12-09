@@ -1,0 +1,28 @@
+<%= link_to 'Voltar', welcome_index_path %>
+
+<h1>Listagem de Pessoas Físicas/Jurídicas</h1>
+
+  <%= link_to 'Cadastrar Nova Pessoa Física/Jurídica', new_pessoa_path %>
+
+  <table>
+    <tr>
+    <th>Nome completo/Razão Social</th>
+    <th>Nome Fantasia</th>
+    <th>CPF/CNPJ</th>
+    <th>Inscrição Estadual</th>
+    <th>RG</th>
+    </tr>
+    
+    <% @pessoas.each do |pessoa| %>
+      <tr>
+        <td><%= pessoa.nomecompletoourazaosocial %></td>
+        <td><%= pessoa.nomefantasia %></td>
+        <td><%= pessoa.cpfoucnpj %></td>
+        <td><%= pessoa.inscricaoestadual %></td>
+        <td><%= pessoa.rg %></td>
+        <td><%= link_to 'Exibir', pessoa_path(pessoa) %></td>
+        <td><%= link_to 'Editar', edit_pessoa_path(pessoa) %></td>
+        <td><%= link_to 'Excluir', pessoa_path(pessoa), method: :delete, data: { confirm: 'Deseja excluir realmente?' } %></td>
+      </tr>
+    <% end %>
+  </table>

@@ -1,0 +1,48 @@
+
+<%= form_with(model: [@pessoa, @pessoa.enderecos.build], local: true) do |form| %>
+  <table>
+    <tr>
+      <th>
+        <%= form.label :cep, "CEP" %>
+        <%= form.text_field :cep %>
+      </th>
+      <th>
+        <%= form.label :logradouro, "Logradouro" %>
+        <%= form.text_field :logradouro %>
+      </th>
+      <th>
+        <%= form.label :numero, "Número" %>
+        <%= form.text_field :numero %>
+      </th>
+      <th>
+        <%= form.label :complemento, "Complemento" %>
+        <%= form.text_field :complemento %>
+      </th>
+      <th>
+        <%= form.label :bairro, "Bairro" %>
+        <%= form.text_field :bairro %>
+      </th>
+      <th>
+        <%= form.label :pais, "País" %>
+        <%= form.text_field :pais %>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <%= form.label :estado, "Estado" %>
+        <%= form.text_field :estado %>
+      </th>
+      <th>
+        <%= form.label :municipio, "Município" %>
+        <%= form.text_field :municipio %>
+      </th>
+      <th>
+        <%= form.label :referencia, "Referência" %>
+        <%= form.text_field :referencia %>
+      </th>
+      <th>
+        <%= form.submit "Salvar" %>
+      </th>
+    </tr>
+  </table>
+  <% end %>

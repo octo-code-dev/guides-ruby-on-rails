@@ -1,0 +1,35 @@
+<%= link_to 'Voltar', pessoas_path %>
+
+<h2>Cadastro de Pessoa Física/Jurídica</h2>
+
+<table>
+  <tr>
+    <th>Nome completo/Razão Social</th>
+    <th>Nome Fantasia</th>
+    <th>CPF/CNPJ</th>
+    <th>Inscrição Estadual</th>
+    <th>RG</th>
+  </tr>
+  <tr>
+    <td><%= @pessoa.nomecompletoourazaosocial %></td>
+    <td><%= @pessoa.nomefantasia %></td>
+    <td><%= @pessoa.cpfoucnpj %></td>
+    <td><%= @pessoa.inscricaoestadual %></td>
+    <td><%= @pessoa.rg %></td>
+  </tr>
+</table>
+
+<%= render 'enderecos/endereco' %>
+
+<%= render 'telefones/telefone' %>
+
+<%= render 'emails/email' %>
+
+<h2>Adicionar Endereço</h2>
+<%= render 'enderecos/index_endereco' %>
+
+<h2>Adicionar Telefone</h2>
+<%= render 'telefones/index_telefone' %>
+
+<h2>Adicionar E-mail</h2>
+<%= render 'emails/index_email' %>

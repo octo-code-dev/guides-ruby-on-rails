@@ -1,0 +1,21 @@
+<%= form_with(model: [@telefone.pessoa, @telefone], local: true) do |form| %>
+  <table>
+    <tr>
+      <th>
+        <%= form.label :numero, "Número" %>
+        <%= form.text_field :numero %>
+      </th>
+      <th>
+        <%= form.label :tipo, "Tipo" %>
+        <%= form.text_field :tipo %>
+      </th>
+      <th>
+        <%= form.label :contato, "Contato" %>
+        <%= form.text_field :contato %>
+      </th>
+      <th>
+        <%= form.submit "Salvar" %>
+      </th>
+    </tr>
+  </table>
+<% end %>

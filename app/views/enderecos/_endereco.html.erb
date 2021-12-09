@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>CEP</th>
+    <th>Logradouro</th>
+    <th>Número</th>
+    <th>Complemento</th>
+    <th>Bairro</th>
+    <th>País</th>
+    <th>Estado</th>
+    <th>Município</th>
+    <th>Referência</th>
+  </tr>
+    <% @pessoa.enderecos.each do |endereco| %>
+      <tr>
+        <td><%= endereco.cep %></td>
+        <td><%= endereco.logradouro %></td>
+        <td><%= endereco.numero %></td>
+        <td><%= endereco.complemento %></td>
+        <td><%= endereco.bairro %></td>
+        <td><%= endereco.pais %></td>
+        <td><%= endereco.estado %></td>
+        <td><%= endereco.municipio %></td>
+        <td><%= endereco.referencia %></td>
+        <td><%= link_to 'Editar', edit_pessoa_endereco_path(@pessoa,endereco) %></td>
+        <td><%= link_to 'Excluir', [endereco.pessoa, endereco], method: :delete, data: { confirm: 'Você tem certeza?' } %>
+      </tr>
+    <% end %>
+</table>

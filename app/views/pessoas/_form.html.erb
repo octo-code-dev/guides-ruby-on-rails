@@ -1,0 +1,46 @@
+  <%= form_with model: @pessoa, local:true do |form| %>
+
+    <% if @pessoa.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          Número de erros detectados: <%= @pessoa.errors.count %>. Verifique por favor:
+        </h2>
+        <ul><% @pessoa.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <table>
+      <tr>
+      <th>
+        <%= form.label :nomecompletoourazaosocial, "Nome completo/Razão Social" %>
+        <%= form.text_field :nomecompletoourazaosocial %>
+      </th>
+    
+      <th>
+        <%= form.label :nomefantasia, "Nome Fantasia" %>
+        <%= form.text_field :nomefantasia %>
+      </th>
+    
+      <th>
+        <%= form.label :cpfoucnpj, "CPF/CNPJ" %>
+        <%= form.text_field :cpfoucnpj %>
+      </th>
+    
+      <th>
+        <%= form.label :inscricaoestadual, "Inscrição Estadual" %>
+        <%= form.text_field :inscricaoestadual %>
+      </th>
+    
+      <th>
+      <%= form.label :rg, "RG" %>
+      <%= form.text_field :rg %>
+      </th>
+    
+      <th>
+        <%= form.submit "Salvar" %>
+      </th>
+    
+    <% end %>

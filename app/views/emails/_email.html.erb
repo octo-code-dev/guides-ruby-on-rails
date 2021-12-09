@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Endereço de e-mail</th>
+    <th>Observação</th>
+  </tr>
+    <% @pessoa.emails.each do |email| %>
+      <tr>
+        <td><%= email.enderecoemail %></td>
+        <td><%= email.observacao %></td>
+        <td><%= link_to 'Editar', edit_pessoa_email_path(@pessoa,email) %></td>
+        <td><%= link_to 'Excluir', [email.pessoa, email], method: :delete, data: { confirm: 'Você tem certeza?' } %>
+      </tr>
+    <% end %>
+</table>

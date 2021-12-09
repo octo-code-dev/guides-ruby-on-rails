@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  enderecoemail: MyString
+  observacao: MyString
+  pessoa: one
+
+two:
+  enderecoemail: MyString
+  observacao: MyString
+  pessoa: two

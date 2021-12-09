@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Número</th>
+    <th>Tipo</th>
+    <th>Contato</th>
+  </tr>
+    <% @pessoa.telefones.each do |telefone| %>
+      <tr>
+        <td><%= telefone.numero %></td>
+        <td><%= telefone.tipo %></td>
+        <td><%= telefone.contato %></td>
+        <td><%= link_to 'Editar', edit_pessoa_telefone_path(@pessoa,telefone) %></td>
+        <td><%= link_to 'Excluir', [telefone.pessoa, telefone], method: :delete, data: { confirm: 'Você tem certeza?' } %>
+      </tr>
+    <% end %>
+</table>

@@ -1,0 +1,17 @@
+<%= form_with(model: [@pessoa, @pessoa.emails.build], local: true) do |form| %>
+  <table>
+    <tr>
+      <th>
+        <%= form.label :enderecoemail, "Endereço de e-mail" %>
+        <%= form.text_field :enderecoemail %>
+      </th>
+      <th>
+        <%= form.label :observacao, "Observação" %>
+        <%= form.text_field :observacao %>
+      </th>
+      <th>
+        <%= form.submit "Salvar" %>
+      </th>
+    </tr>
+  </table>
+<% end %>
