@@ -1,24 +1,12 @@
-# README
+# guides-ruby-on-rails (not completed)
+A simple application to register customers using Ruby on Rails and ViaCEP webservice.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What I learned:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - MVC;
+ - CRUD;
+ - Second Model;
+ - Routing;
+ - Partial Collections;
+ - Partial Form;
+ - Active Record Basics.
